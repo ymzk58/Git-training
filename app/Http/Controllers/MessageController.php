@@ -1,14 +1,12 @@
 <?php
 
 namespace App\Http\Controllers;
-
-use Illuminate\Http\RedirectResponse;
-use function PHPUnit\Framework\returnArgument;
+use Illuminate\Contracts\View\View;
 
 class MessageController extends Controller
 {
-    public function Message() :RedirectResponse
+    public function message():View
     {
-        return Redirect('MessageView');
+        return View("MessageView");
     }
 }
